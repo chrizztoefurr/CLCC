@@ -1,13 +1,140 @@
 body {
+  color: #491D2C;
+  background-color: #C17B88;
+  font-family: 'Lexend Exa', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+hr {
+  margin-left: 150px;
+  margin-right: 150px;
+  border: 1px solid #fff;
+}
+
+.navbar {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: space-between;
+  top: 0px;
+  background-color: #FFEBEB;
+  height: 75px;
+  z-index: 1;
+}
+
+.logo {
+  margin-left: 10px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list li:last-child {
+  margin-right: 10px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #D7A7AA;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover {
+  color: #D7A7AA;
+}
+
+.hero-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 48%;
+  object-fit: cover;
+  opacity: 0.5;
+  padding-top: 40px;
+}
+
+.hero-brand {
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -9px;
+  color: #FFEBEB;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #FFEBEB;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-text {
+  padding-left: 300px;
+}
+
+.about-text p {
+  color: black;
+}
+
+.about-img {
+  padding-right: 300px;
+}
+
+.event-container {
+  padding: 0;
+  margin: 0;
+}
+
+.events {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 175px;
+  padding-left: 175px;
+}
+
+.event-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 300px;
+  justify-content: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.footer ul li {
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 10px;
 }
