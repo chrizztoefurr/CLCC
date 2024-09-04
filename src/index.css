@@ -411,9 +411,18 @@ body {
   }
 
   .about-img-container {
-    right: 0;
-    width: 100%;
-    transform: translateX(0);
+    right: 0; /* Adjust if necessary */
+    transform: translateX(0); /* Ensure the image stays within its container */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    overflow: hidden; /* Hide any overflow content */
+  }
+
+  .about-img {
+    width: 100%;    /* Make sure the image takes up the full width of its container */
+    height: auto;   /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent the image from exceeding its container's width */
+    margin-top: 20px; /* Adjust the margin as needed */
+    border-radius: 5px;
   }
 
   .about-text-container {

@@ -2,14 +2,25 @@ import React from 'react';
 
 function NavBar() {
 
-  document.addEventListener('DOMContentLoaded', function() {
+  React.useEffect(() => {
     const toggleButton = document.querySelector('.navbar-toggle');
     const navbar = document.querySelector('.navbar');
-  
-    toggleButton.addEventListener('click', function() {
+
+    const handleToggle = () => {
       navbar.classList.toggle('active');
-    });
-  });
+    };
+
+    if (toggleButton) {
+      toggleButton.addEventListener('click', handleToggle);
+    }
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      if (toggleButton) {
+        toggleButton.removeEventListener('click', handleToggle);
+      }
+    };
+  }, []); // Empty dependency array ensures this runs once on mount
 
   return (
     <div>
