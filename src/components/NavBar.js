@@ -3,11 +3,11 @@ import React from 'react';
 function NavBar() {
 
   document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.querySelector('.menu-toggle');
-    const navList = document.querySelector('.nav-list');
-
+    const toggleButton = document.querySelector('.navbar-toggle');
+    const navbar = document.querySelector('.navbar');
+  
     toggleButton.addEventListener('click', function() {
-      navList.classList.toggle('open');
+      navbar.classList.toggle('active');
     });
   });
 
@@ -16,6 +16,9 @@ function NavBar() {
       <div className='navbar-container'>
         <h1 className='logo-img'>LOGO</h1>
           <nav className='navbar'>
+          <div class="navbar-toggle">
+            <span class="navbar-toggle-icon">&#9776;</span>
+          </div>
             <ul className='navbar-list'>
               <li>ABOUT US</li>
               <li>SERVICES</li>
