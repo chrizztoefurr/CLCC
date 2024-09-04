@@ -3,20 +3,28 @@ import aboutImg from '../images/aboutimg.jpeg';
 
 function About() {
 
-  document.addEventListener('DOMContentLoaded', function() {
+  React.useEffect(() => {
     const aboutText = document.querySelector('.about-text-container');
     const aboutImg = document.querySelector('.about-img-container');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
-          aboutText.classList.add('animate')
-          aboutImg.classList.add('animate')
+          aboutText.classList.add('animate');
+          aboutImg.classList.add('animate');
         }
       });
     }, { threshold: 0.1 });
-    observer.observe(aboutText)
-  })
+
+    if (aboutText) observer.observe(aboutText);
+    if (aboutImg) observer.observe(aboutImg);
+
+    // Cleanup observer on component unmount
+    return () => {
+      if (aboutText) observer.unobserve(aboutText);
+      if (aboutImg) observer.unobserve(aboutImg);
+    };
+  }, []);
 
 
   return (
