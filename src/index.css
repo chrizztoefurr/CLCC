@@ -334,6 +334,32 @@ body {
 /* Mobile Phones (portrait and landscape) */
 @media (max-width: 767px) {
 
+
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #E1F4F4;
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    left: 0;
+    z-index: 1000;
+  }
+
+  .navbar-list li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: block; /* Show hamburger icon */
+    margin-left: auto;
+  }
+
+  .navbar.active .navbar-list {
+    display: flex;
+  }
+
   .navbar-list,
   .footer-list {
     flex-direction: column;
