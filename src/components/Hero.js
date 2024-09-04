@@ -1,22 +1,16 @@
 import React from 'react';
-import heroimg from '../images/heroimg.webp';
+import cloud from '../images/herobackground.png'
 
 function Hero() {
-  
-  const style = {
-    backgroundColor: '#C17B88'
-  };
-  
   return (
-    <div>
-      <header style={style}>
-        <img className='hero-img' src={heroimg} alt='' />
-        <section className='hero-text'>
-          <p className='hero-brand'>Luxe Cotton Candy</p>
-          <p className='sub-hero-brand'>Colorado's best cotton candy.</p>
-        </section>
-      </header>
-    </div>
+    <section className='hero-container'>
+      <img src={cloud} alt='fluffy pink cotton candy cloud' className='hero-img' />
+      <div className='hero-text'>
+        <h1>Let us make your events fun with gourmet cotton candy.</h1>
+          <p className='hero-sub-text'>Colorado's luxurious cotton candy cart</p>
+        <button className='hero-btn'>ASK ABOUT YOUR EVENT</button>
+      </div>
+    </section>
   )
 };
 

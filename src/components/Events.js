@@ -1,29 +1,31 @@
 import React from 'react';
-import Card from './Card';
-import wedding from '../images/wedding.webp';
-import party from '../images/party.webp';
-import brands from '../images/brands.webp'
-import fundraiser from '../images/fundraiser.webp'
+import Card from './Card'
+import birthday from '../images/birthday.jpeg';
+import brand from '../images/brand.jpeg';
+import wedding from '../images/wedding.jpeg';
+import party from '../images/private.jpeg'
 
 function Events() {
-
-  const style = {
-    backgroundColor: '#C17B88'
-  }
-
   return (
-    <div>
-      <section className='event-container' style={style}>
-        <h3 className='event-title'>SERVICES</h3>
-        <hr />
-        <section className='events'>
-          <Card img={wedding} text='WEDDINGS'/>
-          <Card img={party} text='PARTIES' />
-          <Card img={brands} text='BRANDED EVENTS' />
-          <Card img={fundraiser} text='FUNDRAISERS' />
-        </section>
-      </section>
-    </div>
+    <section>
+      <div>
+        <div className='event-line'></div>
+        <div className='event-line-two'></div>
+        <div className='event-container-text'>
+          <h2 className='event-heading'>Add a touch of <span>whimsy</span> to any occasion</h2>
+        </div>
+        <div className='card-container'>
+          <Card image={party} text='Private Parties' />
+          <Card image={birthday} text='Birthdays' />
+          <Card image={brand} text='Branded Events'/>
+          <Card image={wedding} text='Weddings'/>
+        </div>
+        <p className='event-subheading'>From live cotton candy spinning to pre-spun, packaged treats; we’re dedicated to making your event a sweet success.</p>
+      </div>
+      <div className='event-btn-container'>
+        <button className='event-btn'>ASK ABOUT YOUR EVENT</button>
+      </div>
+    </section>
   )
 };
 

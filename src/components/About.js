@@ -1,28 +1,41 @@
 import React from 'react';
-import freeFrom from '../images/image0.jpeg'
+import aboutImg from '../images/aboutimg.jpeg';
 
 function About() {
 
-  const style = {
-    backgroundColor: '#FFEBEB'
-  }
+  document.addEventListener('DOMContentLoaded', function() {
+    const aboutText = document.querySelector('.about-text-container');
+    const aboutImg = document.querySelector('.about-img-container');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          aboutText.classList.add('animate')
+          aboutImg.classList.add('animate')
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(aboutText)
+  })
+
 
   return (
-    <section style={style}>
+    <section>
+      <div className='about-keyword-container'>
+        <ul className='about-keyword'>
+          <li>hand-spun</li>
+          <li>amazing taste</li>
+          <li>woman-owned</li>
+        </ul>
+      </div>
       <div className='about-container'>
-        <div className='about-text'>
-          <h3>Why choose Colorado Luxe Cotton Candy?</h3>
-          <p>At Colorado Luxe Cotton Candy, we pride ourselves on delivering 100% fresh, gourmet-quality cotton candy for both private and commercial clients. Our cotton candy is crafted from the finest sugars and ingredients, ensuring a soft texture and outstanding flavor that is truly unique. Try our sampler!
-          <br />
-          <br />
-          Each batch is hand-spun and promptly packaged, with double heat sealed packaging to lock in freshness. Our custom designed shipping boxes protect your cotton candy from humidity and damage, ensuring it arrives in perfect condition.
-          <br />
-          <br />
-          Our freshness guarantee is built on well-defined processes, ensuring that every customer, whether private or commercial, receives the consistently delicious, ultra-fresh gourmet cotton candy they expect.
-          We do more than cater - we elevate your event with our charming cart and friendly service.</p>
+        <div className='about-text-container'>
+          <h2 className='about-text-heading'>ABOUT US</h2>
+          <p className='about-text-paragraph-one'>At Colorado Luxe Cotton Candy, we believe in creating unforgettable moments with our premium, hand-spun cotton candy. Founded with a passion for crafting the finest sweet treats, our small, woman-owned business takes pride in delivering cotton candy that is as delightful as it is pure.</p>
+          <p className='about-text-paragraph-two'>Our commitment to quality is evident in every batch we produce. We use only 100% ultra-fine pure granulated sugar, processed without preservatives or chemicals, ensuring our cotton candy is GMO-free, dairy-free, gluten-free, and allergy-free. This dedication to purity results in a cotton candy experience like no other, with an incredible taste and texture that keeps our customers coming back for more.</p>
         </div>
-        <div className='about-img'>
-          <img src={freeFrom} alt='free from soy, gluten, dairy, GMOs and peanuts' />
+        <div className='about-img-container'>
+          <img src={aboutImg} alt='group enjoying cotton candy together' className='about-img' />
         </div>
       </div>
     </section>
