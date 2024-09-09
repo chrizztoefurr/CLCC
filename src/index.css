@@ -245,6 +245,7 @@ a:visited {
 .event-btn-container {
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 
 .event-btn {
