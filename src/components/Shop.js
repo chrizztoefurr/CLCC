@@ -2,7 +2,7 @@ import React from 'react';
 
 function Shop() {
   return (
-    <section>
+    <section id='shop'>
       <div className='shop-container'>
         <div className='shop-text'>
           <h1>Shop us</h1>

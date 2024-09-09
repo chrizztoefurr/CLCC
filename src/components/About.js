@@ -28,11 +28,11 @@ function About() {
 
 
   return (
-    <section>
+    <section id='about'>
       <div className='about-keyword-container'>
         <ul className='about-keyword'>
           <li>hand-spun</li>
-          <li>amazing taste</li>
+          <li>amazing-taste</li>
           <li>woman-owned</li>
         </ul>
       </div>

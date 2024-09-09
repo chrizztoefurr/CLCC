@@ -6,7 +6,7 @@ import React from 'react';
       <div className='footer-container'>
         <div className='footer'>
           <ul className='footer-list'>
-            <li>Contact us</li>
+            <li><a href='#form'>Contact us</a></li>
             <li>Instagram</li>
             <li>Facebook</li>
           </ul>

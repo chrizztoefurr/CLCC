@@ -31,10 +31,10 @@ function NavBar() {
             <span class="navbar-toggle-icon">&#9776;</span>
           </div>
             <ul className='navbar-list'>
-              <li>ABOUT US</li>
-              <li>SERVICES</li>
-              <li>CONTACT US</li>
-              <li>SHOP</li>
+              <li><a href='#about'>ABOUT US</a></li>
+              <li><a href='#services'>SERVICES</a></li>
+              <li><a href='#form'>CONTACT US</a></li>
+              <li><a href='#shop'>SHOP</a></li>
             </ul>
           </nav>
       </div>
